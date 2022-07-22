@@ -1,73 +1,71 @@
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
-import {
-  Link as NextUILink,
-  Spacer,
-  Container,
-  Row,
-} from "@nextui-org/react";
+import { Link as NextUILink, Spacer, Container, Row } from "@nextui-org/react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import mainLogo from "../img/mainLogo.png";
+import { Authorized } from "@solana/web3.js";
 
+import styles from "./style/NavBar.module.css";
 require("@solana/wallet-adapter-react-ui/styles.css");
 
 const LinkCSS = {
   padding: "5px",
-  "background-color": "gray",
+  // "background-color": "gray",
+  fontSize: "24px",
 };
 
 const NavBar = () => {
   return (
     <>
-      <Container
-        fluid
-        alignContent="center"
-        alignItems="center"
-        justify="flex-start"
-        css={{
+      <div
+        style={{
           boxShadow:
             "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
           borderRadius: "1rem",
-          position: "fixed",
+          margin: "auto",
+          position: "sticky",
+          // top: 0,
+          display: "flex",
+          justifyContent: "flex-start",
+          alignContent: "space-evenly",
+          alignItems: "center",
+          width: "80%",
+          gap: "10px",
         }}
+        className={styles.NavBarContainer}
       >
-        <Row>
-          <RouterLink
-            to={""}
+        <RouterLink
+          to={""}
+          style={{
+            display: "flex",
+            margin: "0px ",
+            padding: "0px 10px 0px 0px",
+            // backgroundColor: "gray",
+            objectFit: "cover",
+            alignItems: "center",
+            fontSize: "24px",
+          }}
+        >
+          <img
+            src={mainLogo}
+            alt="logo"
             style={{
-              display: "block",
-              margin: "0px",
-              padding: "0px",
-              backgroundColor: "gray",
               objectFit: "cover",
-              flexShrink: 1,
+              maxWidth: "100px",
+              maxHeight: "200px",
+              width: "2rem",
+              height: "2rem",
+              margin: "5px 10px",
             }}
-          >
-            <img
-              src={mainLogo}
-              alt="logo"
-              style={{
-                backgroundColor: "gray",
-                objectFit: "cover",
-                width: "7%",
-                height: "7%",
-                margin: "5px 10px",
-              }}
-            />
-          </RouterLink>
-          
-          <Spacer x={2} y={0} />
-          
-          <RouterLink to={"test"}>
-            <NextUILink color={"cyan800"} underline css={LinkCSS}>
-              test
-            </NextUILink>
-          </RouterLink>
-          
-          <WalletMultiButton />
-        
-        </Row>
-      </Container>
+          />
+          Home
+        </RouterLink>
+
+        <RouterLink to={"test"} style={LinkCSS}>
+          test
+        </RouterLink>
+        <WalletMultiButton />
+      </div>
     </>
   );
 };
