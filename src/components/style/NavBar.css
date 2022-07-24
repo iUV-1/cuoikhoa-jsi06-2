@@ -1,0 +1,50 @@
+.NavBarContainer {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 1rem;
+  margin: auto;
+  position: sticky;
+    position: -webkit-sticky;
+  top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  gap: 10px;
+  z-index: 6;
+}
+
+.NavBarHomeLink {
+  display: flex;
+  margin: 0px; 
+  padding: 0px 10px 0px 0px;
+  object-fit: cover;
+  align-items: center;
+  font-size: 24px;
+  z-index: inherit;
+}
+
+.NavBarHomeLink:hover {
+  background-color: gray;
+}
+
+.NavBarHomeIMG {
+  object-fit: cover;
+  max-width: 100px;
+  max-height: 200px;
+  width: 2rem;
+  height: 2rem;
+  margin: 5px 10px;
+z-index: inherit;
+}
+
+
+.NavBarLink {
+  font-size: 24px;
+  padding: 5px;
+z-index: inherit;
+}
+
+.NavBarLink:hover {
+  background-color: gray;
+}
+
