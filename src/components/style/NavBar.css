@@ -3,24 +3,22 @@
   border-radius: 1rem;
   margin: auto;
   position: sticky;
-    position: -webkit-sticky;
   top: 10px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 80%;
-  gap: 10px;
-  z-index: 6;
 }
 
 .NavBarHomeLink {
   display: flex;
   margin: 0px; 
-  padding: 0px 10px 0px 0px;
+  padding: 3px 10px 3px 0;
+  border-radius: 1rem 0 0 1rem ;
   object-fit: cover;
   align-items: center;
   font-size: 24px;
-  z-index: inherit;
+  text-decoration: none;
 }
 
 .NavBarHomeLink:hover {
@@ -34,17 +32,21 @@
   width: 2rem;
   height: 2rem;
   margin: 5px 10px;
-z-index: inherit;
 }
 
 
 .NavBarLink {
   font-size: 24px;
-  padding: 5px;
-z-index: inherit;
+  padding: 10px 10px;
+  text-decoration: none;
 }
 
 .NavBarLink:hover {
   background-color: gray;
 }
 
+
+.NavBarLinkCurrent {
+  background-color: black;
+  pointer-events: none;
+}
