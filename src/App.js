@@ -1,12 +1,19 @@
+import "./App.css";
 
-import './App.css';
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-require("@solana/wallet-adapter-react-ui/styles.css");
+import { Routes, Route } from "react-router-dom";
+import Home from './components/Home.js'
+import NavBar from './components/NavBar.js'
+import Test from "./components/Test.js";
+
 
 function App() {
   return (
     <div className="App">
-     <WalletMultiButton/>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/test" element={<Test />} />
+      </Routes>
     </div>
   );
 }
