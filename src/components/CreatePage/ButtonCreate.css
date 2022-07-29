@@ -1,0 +1,18 @@
+.CreateButtonContainer{
+    display:flex;
+    align-items: flex-start;
+}
+.CreateButton{
+    width:104px;
+    height:55px;
+    color:rgb(255, 255, 255);
+    background-color: rgb(32, 129, 226);
+    padding:17px 24px;
+    border-radius:12px;
+    cursor: pointer;
+    border:none;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
