@@ -64,6 +64,7 @@ const NavBar = () => {
         <RouterLink to={"test"} style={LinkCSS}>
           test
         </RouterLink>
+        <RouterLink to={"CreateItems"}> CreateItems</RouterLink>
         <WalletMultiButton />
       </div>
     </>
