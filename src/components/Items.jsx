@@ -3,11 +3,9 @@ import { Card, Grid, Text, Button, Row, Col } from "@nextui-org/react";
 import { useWallet, useConnection } from "@solana/wallet-adapter-react";
 import { Transaction, SystemProgram, LAMPORTS_PER_SOL } from "@solana/web3.js";
 
-const Item = (props) => {
+const Item = ({ data: ItemData, setItems, items }) => {
   const { connection } = useConnection();
   const { publicKey, sendTransaction } = useWallet();
-  const ItemData = props.data;
-  const setItem = props.setItem;
 
   const onSubmit = useCallback(async () => {
     if (!publicKey) {
@@ -30,30 +28,30 @@ const Item = (props) => {
         headers: {
           "Content-type": "application./json",
         },
-        body: JSON.stringify({ isSold: true }),
+        body: JSON.stringify({
+          isSold: true,
+        }),
       }
     );
     const res = await req.json();
-    console.log("res", res);
-    // alert("processed successfully");
-    // setItem((prev) => {
-    //   const findItem = prev.findIndex((item) => item.id === ItemData.id);
-    //   if (findItem !== -1) {
-    //     prev[findItem] = {
-    //       ...ItemData,
-    //       isSold: true,
-    //     };
-    //   }
-    //   return prev;
-    // });
-  });
+    console.log(res);
+    const findItem = items.findIndex((item) => item.id === ItemData.id);
+    if (findItem !== -1) {
+      items[findItem] = {
+        ...items[findItem],
+        isSold: true,
+      };
+    }
+    setItems([...items]);
+    alert("processed successfully");
+  }, [connection, publicKey, sendTransaction]);
 
   return (
     <Card css={{ w: "100%", h: "400px" }}>
       <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
         <Col>
           <Text size={12} weight="bold" transform="uppercase" color="#ffffffAA">
-            {ItemData.price + " solona"}
+            {ItemData.price + " sol"}
           </Text>
           <Text h3 color="black">
             {ItemData.name}
