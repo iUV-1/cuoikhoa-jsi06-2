@@ -1,5 +1,5 @@
 import React from "react";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import mainLogo from "../img/mainLogo.png";
 import { Authorized } from "@solana/web3.js";
@@ -9,6 +9,9 @@ require("@solana/wallet-adapter-react-ui/styles.css");
 
 const NavBar = () => {
   console.log(window.location.pathname)
+  // apparently putting this here automatically fix the reload issue?
+  const location = useLocation();
+
   return (
     <>
       <div className="NavBarContainer">
@@ -20,7 +23,10 @@ const NavBar = () => {
         <RouterLink to={"test"} className={`NavBarLink ${window.location.pathname === "/test" ? "NavBarLinkCurrent" : ""}`}>
           test
         </RouterLink>
-        <RouterLink to={"CreateItems"}> CreateItems</RouterLink>
+
+        <RouterLink to={"CreateItems"} className={`NavBarLink ${window.location.pathname === "/CreateItems" ? "NavBarLinkCurrent" : ""}`}>
+          CreateItems
+        </RouterLink>
         <WalletMultiButton />
       </div>
     </>

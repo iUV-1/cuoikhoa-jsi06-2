@@ -9,7 +9,7 @@ const NameItems = () => {
                 <label className="labelName">Name<span style={{color:'rgb(235, 87, 87)'}}> *</span></label>
             </div>
             <div>
-             <Input clearable bordered Placeholder="Item name" className="ItemNameInput" />
+             <Input clearable bordered placeholder="Item name" className="ItemNameInput" />
             </div>
         </div>
     )
