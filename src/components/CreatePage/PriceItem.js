@@ -6,7 +6,7 @@ const Price = () => {
     return (
         <div className="PriceContainer">
             <label className="labelPrice">Price</label>
-            <Input clearable bordered Placeholder="Type your price"  className="PriceInput"/>
+            <Input clearable bordered placeholder="Type your price"  className="PriceInput"/>
         </div>
     )
 }
