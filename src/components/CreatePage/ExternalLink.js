@@ -11,7 +11,7 @@ const ExTernalLinks = () => {
                 alignItems: 'flex-start',
             }}>
             <label className="ExternalLabel">External link</label>
-            <span className="ExternalDescriptions">OpenSea will include a link to this URL on this item's detail page, so that users can click to learn more about it. You are welcome <p style={{margin:'0'}}>to link to your own webpage with more details.</p></span>
+            <span className="ExternalDescriptions">OpenSea will include a link to this URL on this item's detail page, so that users can click to learn more about it. You are welcome to link to your own webpage with more details.</span>
             </div>
             <div>
              <Input clearable bordered Placeholder="https://yoursite.io/item/123" className="ExternalLinkInput" />
