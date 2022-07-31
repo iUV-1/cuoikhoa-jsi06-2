@@ -5,7 +5,8 @@
   position: sticky;
   top: 20px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  background-color: white;
   align-items: center;
   width: 80%;
 }
@@ -22,7 +23,7 @@
 }
 
 .NavBarHomeLink:hover {
-  background-color: gray;
+  background-color: gainsboro;
 }
 
 .NavBarHomeIMG {
@@ -42,7 +43,7 @@
 }
 
 .NavBarLink:hover {
-  background-color: gray;
+  background-color: gainsboro;
 }
 
 
