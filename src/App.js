@@ -5,7 +5,6 @@ import Home from './components/Home.js'
 import NavBar from './components/NavBar.js'
 import Test from "./components/Test.js";
 
-
 function App() {
   return (
     <div className="App">
@@ -14,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/test" element={<Test />} />
       </Routes>
+      
     </div>
   );
 }

@@ -1,11 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { Container } from '@nextui-org/react';
+import ItemContainer from "./ItemContainer";
 
 const Home = () => {
     return(
-        <div>
-            <h1>You are at: Home</h1>
-        </div>
+        <Container>
+           <ItemContainer/>
+        </Container>
     )
 }
 
