@@ -1,0 +1,21 @@
+.PriceContainer{
+    display:flex;
+    flex-direction:column;
+    align-items: flex-start;
+}
+.labelPrice{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.PriceInput{
+    max-width: 756px;
+        height: 48px;
+        padding: 0px 12px 0px 0px;
+        width: 756px;
+        min-width: 0px;
+        outline: none;
+        border: none;
+        margin-top: 10px;
+        margin-bottom: 20px;
+}

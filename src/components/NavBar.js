@@ -1,73 +1,55 @@
 import React from "react";
-import { Link as RouterLink } from "react-router-dom";
-import {
-  Link as NextUILink,
-  Spacer,
-  Container,
-  Row,
-} from "@nextui-org/react";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import mainLogo from "../img/mainLogo.png";
+import { Authorized } from "@solana/web3.js";
 
+import "./style/NavBar.css";
 require("@solana/wallet-adapter-react-ui/styles.css");
 
-const LinkCSS = {
-  padding: "5px",
-  "background-color": "gray",
-};
-
 const NavBar = () => {
+  console.log(window.location.pathname);
+  // apparently putting this here automatically fix the reload issue?
+  const location = useLocation();
+
   return (
     <>
-      <Container
-        fluid
-        alignContent="center"
-        alignItems="center"
-        justify="flex-start"
-        css={{
-          boxShadow:
-            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-          borderRadius: "1rem",
-          position: "fixed",
-        }}
-      >
-        <Row>
-          <RouterLink
-            to={""}
-            style={{
-              display: "block",
-              margin: "0px",
-              padding: "0px",
-              backgroundColor: "gray",
-              objectFit: "cover",
-              flexShrink: 1,
-            }}
-          >
-            <img
-              src={mainLogo}
-              alt="logo"
-              style={{
-                backgroundColor: "gray",
-                objectFit: "cover",
-                width: "7%",
-                height: "7%",
-                margin: "5px 10px",
-              }}
-            />
-          </RouterLink>
-          
-          <Spacer x={2} y={0} />
-          
-          <RouterLink to={"test"}>
-            <NextUILink color={"cyan800"} underline css={LinkCSS}>
-              test
-            </NextUILink>
-          </RouterLink>
-          
-          <WalletMultiButton />
-        
-        </Row>
-      </Container>
+      <div className="NavBarContainer">
+        <div style={{display : "flex"}}>
+        <RouterLink
+          to={""}
+          className={`NavBarHomeLink ${
+            window.location.pathname === "/" ? "NavBarLinkCurrent" : ""
+          } `}
+        >
+          <img src={mainLogo} alt="logo" className="NavBarHomeIMG" />
+          Home
+        </RouterLink>
+
+        <RouterLink
+          to={"test"}
+          className={`NavBarLink ${
+            window.location.pathname === "/test" ? "NavBarLinkCurrent" : ""
+          }`}
+        >
+          test
+        </RouterLink>
+
+        <RouterLink
+          to={"CreateItems"}
+          className={`NavBarLink ${
+            window.location.pathname === "/CreateItems"
+              ? "NavBarLinkCurrent"
+              : ""
+          }`}
+        >
+          Create
+        </RouterLink>
+        </div>
+
+        <WalletMultiButton style={{backgroundColor: "black"}} />
+
+      </div>
     </>
   );
 };
