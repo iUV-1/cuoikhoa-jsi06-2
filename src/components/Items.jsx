@@ -7,6 +7,7 @@ const Item = ({ data: ItemData, setItems, items }) => {
   const { connection } = useConnection();
   const { publicKey, sendTransaction } = useWallet();
 
+
   const onSubmit = useCallback(async () => {
     if (!publicKey) {
       alert("please open a wallet first");
@@ -22,24 +23,24 @@ const Item = ({ data: ItemData, setItems, items }) => {
     const signature = await sendTransaction(transaction, connection);
     await connection.confirmTransaction(signature, "processed");
     const req = await fetch(
-      `https://62dcaf7f4438813a26182349.mockapi.io/api/v1/collection/nft/${ItemData.id}`,
+      `https://61ebae077ec58900177cdd0b.mockapi.io/nft/${ItemData.id}`,
       {
         method: "PUT",
         headers: {
-          "Content-type": "application./json",
+          "Content-type": "application/json",
         },
         body: JSON.stringify({
-          isSold: true,
+          isSold: publicKey.toBase58(),
         }),
       }
     );
     const res = await req.json();
-    console.log(res);
+
     const findItem = items.findIndex((item) => item.id === ItemData.id);
     if (findItem !== -1) {
       items[findItem] = {
         ...items[findItem],
-        isSold: true,
+        isSold:  publicKey.toBase58(),
       };
     }
     setItems([...items]);
@@ -80,7 +81,7 @@ const Item = ({ data: ItemData, setItems, items }) => {
         <Row>
           <Col>
             <Text color="#000" size={12}>
-              {ItemData.isSold === true ? (
+              {ItemData.isSold === publicKey?.toBase58() ? (
                 <div>Available soon.</div>
               ) : (
                 <div>Available now.</div>
@@ -92,7 +93,7 @@ const Item = ({ data: ItemData, setItems, items }) => {
           </Col>
           <Col>
             <Row>
-              {ItemData.isSold === true ? (
+              {ItemData.isSold  === publicKey?.toBase58() ? (
                 <Button flat auto rounded color="secondary">
                   <Text
                     css={{ color: "inherit" }}
@@ -100,7 +101,7 @@ const Item = ({ data: ItemData, setItems, items }) => {
                     weight="bold"
                     transform="uppercase"
                   >
-                    Sold out
+                    Download
                   </Text>
                 </Button>
               ) : (
