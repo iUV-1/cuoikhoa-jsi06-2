@@ -14,7 +14,7 @@ const DescriptionItems = () => {
             }}>Markdown</a> syntax is supported.</span>
             </div>
             <div>
-                <Textarea Placeholder="Provide a detailed description of your item" className="DescriptionTextArea"/>
+                <Textarea placeholder="Provide a detailed description of your item" className="DescriptionTextArea"/>
             </div>
         </div>
     )

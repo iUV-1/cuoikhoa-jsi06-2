@@ -16,11 +16,12 @@
     cursor:pointer;
     border-radius:10px;
     margin-bottom:10px;
-    display:flex;
-    align-items:center;
+        display:flex;
+        align-items:center; 
 }
 .box:hover{
     background-color:rgb(179,179,179);
+
 }
 .icon-upload{
         display:flex;
@@ -28,5 +29,17 @@
         height:34%;
         color: rgb(204, 204, 204);
         margin : 0 auto;
-        
-    }
+       
+}
+.box input{
+    display:none;
+}
+
+.imagePreview{
+    width:100%;
+    height: 100%;
+    border-radius:10px;
+    flex-shrink: 0;
+    min-width: 100%;
+     min-height: 100%
+}
