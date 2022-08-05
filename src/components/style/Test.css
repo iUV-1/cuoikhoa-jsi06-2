@@ -1,0 +1,208 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+.TestContainer {
+    height: auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    background-color: rgb(4, 17, 29);
+}
+.CardBody {
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: center;
+
+}
+.TextTest {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    color: rgb(255, 255, 255);
+    justify-content:center;
+
+}
+.TextContainer {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+
+}
+html {
+    font-family: Poppins, sans-serif;
+    line-height: 1.5;
+}
+.TextInput {
+    min-width: 50px;
+    width: 100%;
+    cursor: text;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid rgb(76, 80, 92);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 12px;
+    height: 48px;
+    font-size: 16px;
+}
+.TextBox {
+    display:flex;
+    width: 100%;
+    margin-top: 16px;
+    justify-content: flex-end;
+}
+.TextIcons {
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.TextInput input {
+    font-size: inherit;
+    line-height: inherit;
+    min-height: inherit;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+button, input {
+    color: inherit;
+    font: inherit;
+    margin: 0px;
+}
+.TextFull {
+    width: 100%;
+    padding-right: 8px;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+.Button {
+    display: inline-flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 12px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    padding: 17px 24px;
+    background-color: rgb(32, 129, 226);
+    border: 2px solid transparent;
+    color: rgb(255, 255, 255);
+}
+.TextButton {
+    margin: 0px 8px 8px;
+    height: 50px;
+    width: 162px;
+}
+.reactIcon {
+    height: 20px;
+    width: 30px;
+}
+.TextIn {
+    margin-right: 12px;
+    width: 54px;
+    height: 54px;
+    margin-top: 8px;
+    display: inline-flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 12px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    padding: 17px 24px;
+    background-color: rgb(53, 56, 64);
+    border: 2px solid rgb(53, 56, 64);
+    color: rgb(255, 255, 255);
+}
+.CardBodo {
+    width: 100%;
+    height: fit-content;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-left: 0px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.CardContainer {
+    width: 20%;
+    height: 100%;
+    padding-top: 0px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    flex-direction: column;
+    color: rgb(229, 232, 235);
+    -webkit-box-align: center;
+}
+h3 {
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    line-height: 110%;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-bottom: 24px;
+}
+.ul {
+    margin-top: 0px;
+    padding-left: 0px;
+    list-style-type: none;
+}
+li {
+    text-align: initial;
+    font-size: 14px;
+    margin-top: 12px;
+    list-style-type: none;
+    display: list-item;
+}
+.CardContainere {
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    color: rgb(255, 255, 255);
+}
+.p {
+    width: 75%;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    text-align: initial;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.a {
+    color: rgb(251, 253, 255);
+    margin-top: 0px;
+    font-size: 12px;
+}
+.b {
+    margin-left: 16px;
+    margin-top: 0px;
+    font-size: 12px;
+}
