@@ -1,0 +1,20 @@
+.App {
+    display: grid;
+    grid-template-areas: "header"
+                        "content"
+                        "footer";
+                        background-color: #25272D;
+                        grid-template-rows: 100px 1fr 1fr;
+                        gap: 20px;
+}
+
+
+p {
+    color: white;
+
+}
+
+label {
+    color: white;
+}
+

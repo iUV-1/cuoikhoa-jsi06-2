@@ -1,14 +1,13 @@
 import React from 'react';
 import { Container } from '@nextui-org/react';
 import ItemContainer from "./ItemContainer";
-import Test from "./Footer"
 
-const Home = () => {
+const AllItems = () => {
     return(
-        <p>
-            You are at Home
-        </p>
+        <Container>
+           <ItemContainer/>
+        </Container>
     )
 }
 
-export default Home
+export default AllItems

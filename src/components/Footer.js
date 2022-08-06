@@ -1,9 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
 import { Link as NextUILink, Container } from "@nextui-org/react";
+import "./style/Footer.css";
 
-import "./style/Test.css";
 import {
   FaTwitter,
   FaInstagram,
@@ -14,9 +13,9 @@ import {
 import { TbBrandReddit } from "react-icons/tb";
 import { CgMail } from "react-icons/cg";
 
-const Test = () => {
+const Footer = () => {
   return (
-    <Container className="TestContainer">
+    <Container fluid className="TestContainer">
       <div className="TextColumn">
         <div className="TextColum">
           <div className="TextCardBody">
@@ -165,4 +164,4 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default Footer;
