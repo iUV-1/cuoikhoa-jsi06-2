@@ -1,10 +1,18 @@
-*, ::before, ::after {
+*,
+::before,
+::after {
     box-sizing: border-box;
 }
+
 .TestContainer {
+    margin-top :20px;
     height: auto;
     /* display: flex; */
     -webkit-box-pack: center;
+
+position: relative;
+    width: 100%;
+
     position: relative;
     width: 100%;
     min-width: 100%;
@@ -12,8 +20,22 @@
     padding-top: 10px;
 
 }
+
 .CardBody {
     width: 60%;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: left;
+}
+
+.CardBodey {
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: left;
+    margin-left: 100px;
+    margin-right: -250px;
+
     -webkit-box-align: center;
     align-items: center;
     text-align: left;
@@ -25,23 +47,32 @@
     text-align: left;
     margin-left:100px;
     margin-right:-250px;
+
 }
+
 .TextTest {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 8px;
     margin-top: 8px;
-    color: #FFFFFA;
+    color: rgb(255, 255, 255);
+
+    justify-content: center;
+
     justify-content:center;
+
 }
+
 .TextContainer {
     font-size: 16px;
     color: #FFFFFA;
 }
+
 html {
     font-family: Poppins, sans-serif;
     line-height: 1.5;
 }
+
 .TextInput {
     min-width: 50px;
     width: 100%;
@@ -57,17 +88,20 @@ html {
     height: 48px;
     font-size: 16px;
 }
+
 .TextBox {
-    display:flex;
+    display: flex;
     width: 100%;
     margin-top: 16px;
     justify-content: flex-end;
 }
+
 .TextIcons {
     flex-wrap: wrap;
     -webkit-box-pack: center;
     justify-content: center;
 }
+
 .TextInput input {
     font-size: inherit;
     line-height: inherit;
@@ -77,20 +111,26 @@ html {
     outline: none;
     width: 100%;
 }
-button, input {
+
+button,
+input {
     color: inherit;
     font: inherit;
     margin: 0px;
 }
+
 .TextFull {
     width: 100%;
     padding-right: 8px;
 }
-html, body {
+
+html,
+body {
     width: 100%;
     height: 100%;
     margin: 0px;
 }
+
 .Button {
     display: inline-flex;
     flex-direction: row;
@@ -108,15 +148,18 @@ html, body {
     border: 2px solid transparent;
     color: #FFFFFA;
 }
+
 .TextButton {
     margin: 0px 8px 8px;
     height: 50px;
     width: 162px;
 }
+
 .reactIcon {
     height: 20px;
     width: 30px;
 }
+
 .TextIn {
     margin-right: 12px;
     width: 54px;
@@ -138,6 +181,7 @@ html, body {
     border: 2px solid rgb(53, 56, 64);
     color: #FFFFFA;
 }
+
 .CardBodo {
     width: 100%;
     height: fit-content;
@@ -148,6 +192,7 @@ html, body {
     flex-wrap: wrap;
     display: flex;
 }
+
 .CardContainer {
     width: 20%;
     height: 100%;
@@ -158,6 +203,7 @@ html, body {
     -webkit-box-align: center;
     justify-content: space-around;
 }
+
 h3 {
     font-weight: 600;
     color: #FFFFFA;
@@ -168,11 +214,13 @@ h3 {
     margin-inline-end: 0px;
     margin-bottom: 24px;
 }
+
 .ul {
     margin-top: 0px;
     padding-left: 0px;
     list-style-type: none;
 }
+
 li {
     text-align: initial;
     font-size: 14px;
@@ -180,6 +228,7 @@ li {
     list-style-type: none;
     display: list-item;
 }
+
 .CardContainere {
     -webkit-box-align: center;
     align-items: center;
@@ -188,17 +237,20 @@ li {
     font-size: 12px;
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 100px;
     margin-left:100px;
     margin-right: 100px;
     color: #FFFFFA;
     display: flex;
 }
+
 .p {
     width: 75%;
     -webkit-box-pack: start;
     justify-content: flex-start;
     text-align: initial;
 }
+
 p {
     display: block;
     margin-block-start: 1em;
@@ -206,24 +258,35 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+
 .a {
     color: rgb(251, 253, 255);
     margin-top: 0px;
     font-size: 12px;
 }
+
 .b {
     margin-left: 16px;
     margin-top: 0px;
     font-size: 12px;
 }
+
+.TextColumn {
+    justify-content: space-around;
+    display: flex;
+}
+
+
 .TextColumn {
     justify-content: space-around;
     display:flex;
 }
+
 .Card {
     display: flex;
     justify-content: space-between;
 }
+
 .TextColum {
     margin-right: 200px;
     margin-left: 100px;

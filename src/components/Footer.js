@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Link as NextUILink, Container, } from "@nextui-org/react";
+import { Link as NextUILink, Container } from "@nextui-org/react";
 import "./style/Footer.css";
+
 import {
   FaTwitter,
   FaInstagram,
