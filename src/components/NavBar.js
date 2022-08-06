@@ -34,7 +34,7 @@ const NavBar = () => {
   return (
     <>
       <div className={`NavBarContainer ${NavBarVisible ? "NavBarContainerScroll" : ""}`}>
-        <div style={{display : "flex"}}>
+        <div className="NavBarItems">
         <RouterLink
           to={""}
           className={`NavBarHomeLink ${

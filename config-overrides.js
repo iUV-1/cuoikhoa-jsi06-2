@@ -1,5 +1,4 @@
 const { ProvidePlugin } = require("webpack");
-const { override, addPostcssPlugins } = require('customize-cra')
 
 module.exports = function (config, env) {
   return {
