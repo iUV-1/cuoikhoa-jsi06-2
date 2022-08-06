@@ -1,29 +1,43 @@
 .NavBarContainer {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 1rem;
-  margin: auto;
-  position: sticky;
-  top: 20px;
   display: flex;
+  margin: 0 auto;
+  padding: 0px 10vw;
   justify-content: space-between;
-  background-color: white;
   align-items: center;
-  width: 80%;
+  width: 100%;
+  background-color: #1C1D22;
+}
+
+.NavBarItems {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto;
+}
+
+.NavBarContainerScroll {
+  position: sticky;
+  top: 0px;
+  z-index: 999999;
+  transition: top 1s;
+  width: 100%;
+  padding: 10px 90;
+  background-color: #1C1D22;
+}
+
+.NavBarLink {
+  display: flex;
+  font-size: 24px;
+  padding: 10px 10px;
+  text-decoration: none;
+  align-items: center;
+  color: #FFFFFA;
+  border-bottom: 0px;
+  transition: border-bottom .2s ease-in-out;
 }
 
 .NavBarHomeLink {
-  display: flex;
-  margin: 0px; 
+  margin: 0;
   padding: 3px 10px 4px 0;
-  border-radius: 1rem 0 0 1rem ;
-  object-fit: cover;
-  align-items: center;
-  font-size: 24px;
-  text-decoration: none;
-}
-
-.NavBarHomeLink:hover {
-  background-color: gainsboro;
 }
 
 .NavBarHomeIMG {
@@ -35,19 +49,14 @@
   margin: 5px 10px;
 }
 
-
-.NavBarLink {
-  font-size: 24px;
-  padding: 10px 10px;
-  text-decoration: none;
+.NavBarHomeLink:hover, .NavBarLink:hover {
+  border-bottom: 10px solid #24D2F9;
+  padding-bottom: 5px;
+  transition: all .2s ease-in-out;
 }
-
-.NavBarLink:hover {
-  background-color: gainsboro;
-}
-
 
 .NavBarLinkCurrent {
-  background-color: whitesmoke;
   pointer-events: none;
+  border-bottom: 5px solid #24D2F9;
+  font-weight: 600;
 }

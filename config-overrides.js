@@ -1,5 +1,4 @@
 const { ProvidePlugin } = require("webpack");
-
 module.exports = function (config, env) {
   return {
     ...config,
