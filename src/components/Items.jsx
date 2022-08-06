@@ -1,12 +1,11 @@
 import React, { useCallback } from "react";
-import { Card, Grid, Text, Button, Row, Col } from "@nextui-org/react";
+import { Card, Grid, Text, Button, Row, Col, Popover } from "@nextui-org/react";
 import { useWallet, useConnection } from "@solana/wallet-adapter-react";
 import { Transaction, SystemProgram, LAMPORTS_PER_SOL } from "@solana/web3.js";
 
 const Item = ({ data: ItemData, setItems, items }) => {
   const { connection } = useConnection();
   const { publicKey, sendTransaction } = useWallet();
-
 
   const onSubmit = useCallback(async () => {
     if (!publicKey) {
@@ -40,7 +39,7 @@ const Item = ({ data: ItemData, setItems, items }) => {
     if (findItem !== -1) {
       items[findItem] = {
         ...items[findItem],
-        isSold:  publicKey.toBase58(),
+        isSold: publicKey.toBase58(),
       };
     }
     setItems([...items]);
@@ -51,12 +50,24 @@ const Item = ({ data: ItemData, setItems, items }) => {
     <Card css={{ w: "100%", h: "400px" }}>
       <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
         <Col>
-          <Text size={12} weight="bold" transform="uppercase" color="#ffffffAA">
-            {ItemData.price + " sol"}
-          </Text>
-          <Text h3 color="black">
-            {ItemData.name}
-          </Text>
+          <Popover isBordered disableShadow>
+            <Popover.Trigger>
+              <Button color="secondary" auto flat css={{ opacity: 0.7 }}>
+                {ItemData.name}
+              </Button>
+            </Popover.Trigger>
+            <Popover.Content css={{ border: "hidden", background: "black" }}>
+              <Text
+                css={{
+                  textGradient: "45deg, $blue600 -20%, $pink600 50%",
+                  p: "$10",
+                }}
+                weight="bold"
+              >
+                {ItemData.des}
+              </Text>
+            </Popover.Content>
+          </Popover>
         </Col>
       </Card.Header>
       <Card.Body css={{ p: 0 }}>
@@ -87,13 +98,13 @@ const Item = ({ data: ItemData, setItems, items }) => {
                 <div>Available now.</div>
               )}
             </Text>
-            <Text color="#000" size={12}>
-              {ItemData.des}
+            <Text color="#000" size={12} transform="uppercase" weight="bold">
+              {ItemData.price + " sol"}
             </Text>
           </Col>
           <Col>
             <Row>
-              {ItemData.isSold  === publicKey?.toBase58() ? (
+              {ItemData.isSold === publicKey?.toBase58() ? (
                 <Button flat auto rounded color="secondary">
                   <Text
                     css={{ color: "inherit" }}
