@@ -2,7 +2,6 @@ import React, {
   useState,
   useEffect,
   useLayoutEffect,
-  componentDidMount,
 } from "react";
 import { Grid, Loading } from "@nextui-org/react";
 
@@ -66,7 +65,7 @@ const ItemContainer = () => {
           backgroundColor: "#5C5F70",
         }}
       />
-      <LoadingStatus active={loading}></LoadingStatus>
+      <LoadingStatus active={loading} text="Fetching data..."></LoadingStatus>
       <Grid.Container className="item-container" gap={2} justify="center">
         {items.map((a, index) => {
           return (
