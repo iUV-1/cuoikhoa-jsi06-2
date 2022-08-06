@@ -8,7 +8,7 @@
     position: relative;
     width: 100%;
     min-width: 100%;
-    background-color: rgb(4, 17, 29);
+    background-color: #121316;
     padding-top: 10px;
 
 }
@@ -31,12 +31,12 @@
     font-weight: 600;
     margin-bottom: 8px;
     margin-top: 8px;
-    color: rgb(255, 255, 255);
+    color: #FFFFFA;
     justify-content:center;
 }
 .TextContainer {
     font-size: 16px;
-    color: rgb(255, 255, 255);
+    color: #FFFFFA;
 }
 html {
     font-family: Poppins, sans-serif;
@@ -51,7 +51,7 @@ html {
     align-items: center;
     border-radius: 10px;
     border: 2px solid rgb(76, 80, 92);
-    color: rgb(255, 255, 255);
+    color: #FFFFFA;
     width: 100%;
     padding: 12px;
     height: 48px;
@@ -104,9 +104,9 @@ html, body {
     line-height: 22px;
     letter-spacing: 0.01em;
     padding: 17px 24px;
-    background-color: rgb(32, 129, 226);
+    background-color: #24D2F9;
     border: 2px solid transparent;
-    color: rgb(255, 255, 255);
+    color: #FFFFFA;
 }
 .TextButton {
     margin: 0px 8px 8px;
@@ -136,7 +136,7 @@ html, body {
     padding: 17px 24px;
     background-color: rgb(53, 56, 64);
     border: 2px solid rgb(53, 56, 64);
-    color: rgb(255, 255, 255);
+    color: #FFFFFA;
 }
 .CardBodo {
     width: 100%;
@@ -160,7 +160,7 @@ html, body {
 }
 h3 {
     font-weight: 600;
-    color: rgb(255, 255, 255);
+    color: #FFFFFA;
     line-height: 110%;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -190,7 +190,7 @@ li {
     margin-bottom: 20px;
     margin-left:100px;
     margin-right: 100px;
-    color: rgb(255, 255, 255);
+    color: #FFFFFA;
     display: flex;
 }
 .p {

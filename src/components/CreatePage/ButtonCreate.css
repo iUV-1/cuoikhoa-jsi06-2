@@ -5,8 +5,8 @@
 .CreateButton{
     width:104px;
     height:55px;
-    color:rgb(255, 255, 255);
-    background-color: rgb(32, 129, 226);
+    color: #fffffa;
+    background-color: #06C4EF;
     padding:17px 24px;
     border-radius:12px;
     cursor: pointer;

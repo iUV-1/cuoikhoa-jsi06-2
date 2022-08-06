@@ -1,46 +1,40 @@
 .NavBarContainer {
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 1rem; */
-  margin: auto;
-  /* position: sticky;
-  top: 20px; */
-  padding-top: 10px;
+  margin: 0 auto;
+  padding: 0px 10vw;
   display: flex;
   justify-content: space-between;
-  /* background-color: white; */
   align-items: center;
-  width: 80%;
+  width: 100%;
+  background-color: #1C1D22;
 }
 
 .NavBarContainerScroll {
   position: sticky;
-  top: 10px;
+  top: 0px;
   z-index: 999999;
   transition: top 1s;
   width: 100%;
-  padding: 0 90;
-  background-color: #25272D;
+  padding: 10px 90;
+  background-color: #1C1D22;
 }
 
 .NavBarHomeLink {
   display: flex;
   margin: 0px; 
   padding: 3px 10px 4px 0;
-  /* border-radius: 1rem 0 0 1rem ; */
   object-fit: cover;
   align-items: center;
   font-size: 24px;
   text-decoration: none;
-  color: #24D2F9;
-  /* font-weight: 600;  */
+  color: #FFFFFA;
   border-bottom: 0px;
-   transition: border-bottom .2s ease-in-out;
+  transition: border-bottom .2s ease-in-out;
 }
 
-.NavBarHomeLink:hover {
-   border-bottom: 10px solid #FFFFFA;
+.NavBarHomeLink:hover, .NavBarLink:hover {
+   border-bottom: 10px solid #24D2F9;
    padding-bottom: 3px;
-   transition: border-bottom .2s ease-in-out;
+   transition: all .2s ease-in-out;
    position: relative;
 }
 
@@ -53,21 +47,15 @@
   margin: 5px 10px;
 }
 
-
 .NavBarLink {
   font-size: 24px;
   padding: 10px 10px;
   text-decoration: none;
-  color: #24D2F9;
+  color: #FFFFFA;
 }
-
-.NavBarLink:hover {
-  border-bottom: 3px solid #FFFFFA;
-  position: relative;
-}
-
 
 .NavBarLinkCurrent {
   pointer-events: none;
-  border-bottom: 5px solid #FFFFFA;
+  border-bottom: 5px solid #24D2F9;
+  font-weight: 600;
 }
