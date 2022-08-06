@@ -14,27 +14,27 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="NavBarContainer">
+      <div className="NavBarContainer shadow-lg">
         <div style={{display : "flex"}}>
         <RouterLink
           to={""}
           className={`NavBarHomeLink ${
             window.location.pathname === "/" ? "NavBarLinkCurrent" : ""
-          } `}
+          }`}
         >
           <img src={mainLogo} alt="logo" className="NavBarHomeIMG" />
           Home
         </RouterLink>
-
-        <RouterLink
-          to={"test"}
+<RouterLink
+          to={"Items"}
           className={`NavBarLink ${
-            window.location.pathname === "/test" ? "NavBarLinkCurrent" : ""
+            window.location.pathname === "/Items"
+              ? "NavBarLinkCurrent"
+              : ""
           }`}
         >
-          test
+          Items 
         </RouterLink>
-
         <RouterLink
           to={"CreateItems"}
           className={`NavBarLink ${

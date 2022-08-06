@@ -1,12 +1,10 @@
 import React from 'react';
-import { Container } from '@nextui-org/react';
-import ItemContainer from "./ItemContainer";
 
 const Home = () => {
     return(
-        <Container>
-           <ItemContainer/>
-        </Container>
+        <p>
+            you are at Home
+        </p>
     )
 }
 

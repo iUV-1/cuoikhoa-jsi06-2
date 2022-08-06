@@ -1,12 +1,12 @@
 .NavBarContainer {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 1rem;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 1rem; */
   margin: auto;
   position: sticky;
   top: 20px;
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  /* background-color: white; */
   align-items: center;
   width: 80%;
 }
@@ -15,11 +15,13 @@
   display: flex;
   margin: 0px; 
   padding: 3px 10px 4px 0;
-  border-radius: 1rem 0 0 1rem ;
+  /* border-radius: 1rem 0 0 1rem ; */
   object-fit: cover;
   align-items: center;
   font-size: 24px;
   text-decoration: none;
+  color: #60DEFB;
+  font-weight: 600; 
 }
 
 .NavBarHomeLink:hover {
@@ -48,6 +50,6 @@
 
 
 .NavBarLinkCurrent {
-  background-color: whitesmoke;
   pointer-events: none;
+  border-bottom: 5px solid black;
 }
