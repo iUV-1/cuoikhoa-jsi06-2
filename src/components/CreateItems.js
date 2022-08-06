@@ -76,7 +76,7 @@ const CreateItems = () => {
             },
             body: JSON.stringify(payload),
         })
-        
+        alert("Processed successfully")
     }
     
 
