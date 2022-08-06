@@ -89,7 +89,7 @@ const Item = ({ data: ItemData, setItems, items }) => {
           zIndex: 1,
         }}
       >
-        <Row>
+        <Row css={{ "margin-left": "20px" }}>
           <Col>
             <Text color="#000" size={12}>
               {ItemData.isSold === publicKey?.toBase58() ? (
@@ -103,9 +103,15 @@ const Item = ({ data: ItemData, setItems, items }) => {
             </Text>
           </Col>
           <Col>
-            <Row>
+            <Row auto>
               {ItemData.isSold === publicKey?.toBase58() ? (
-                <Button flat auto rounded color="secondary">
+                <Button
+                  flat
+                  auto
+                  css={{ "margin-left": "10px" }}
+                  rounded
+                  color="secondary"
+                >
                   <Text
                     css={{ color: "inherit" }}
                     size={12}
@@ -116,7 +122,14 @@ const Item = ({ data: ItemData, setItems, items }) => {
                   </Text>
                 </Button>
               ) : (
-                <Button onPress={onSubmit} flat auto rounded color="secondary">
+                <Button
+                  onPress={onSubmit}
+                  css={{ "margin-left": "20px" }}
+                  flat
+                  auto
+                  rounded
+                  color="secondary"
+                >
                   <Text
                     css={{ color: "inherit" }}
                     size={12}
