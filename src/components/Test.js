@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-<<<<<<< HEAD
 import { Link as NextUILink, Container, } from "@nextui-org/react";
 import "./style/Test.css";
 import {
@@ -162,14 +161,6 @@ const Test = () => {
         </div>
       </div>
     </Container>
-=======
-
-const Test = () => {
-  return (
-    <div>
-      <h1>You are at: Test</h1>
-    </div>
->>>>>>> 5bde4a89a8764e1c43e4010675cd051a64f43ea2
   );
 };
 
