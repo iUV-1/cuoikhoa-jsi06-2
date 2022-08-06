@@ -5,11 +5,12 @@
 }
 
 .TestContainer {
+    margin-top :20px;
     height: auto;
     /* display: flex; */
     -webkit-box-pack: center;
-    position: relative;
-    width: auto;
+position: relative;
+    width: 100%;
     background-color: rgb(4, 17, 29);
 }
 
@@ -27,6 +28,19 @@
     text-align: left;
     margin-left: 100px;
     margin-right: -250px;
+
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: left;
+}
+.CardBodey {
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: left;
+    margin-left:100px;
+    margin-right:-250px;
+
 }
 
 .TextTest {
@@ -35,7 +49,11 @@
     margin-bottom: 8px;
     margin-top: 8px;
     color: rgb(255, 255, 255);
+
     justify-content: center;
+
+    justify-content:center;
+
 }
 
 .TextContainer {
@@ -213,6 +231,7 @@ li {
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 100px;
+    margin-left:100px;
     margin-right: 100px;
     color: rgb(255, 255, 255);
     display: flex;
@@ -248,6 +267,12 @@ p {
 .TextColumn {
     justify-content: space-around;
     display: flex;
+}
+
+
+.TextColumn {
+    justify-content: space-around;
+    display:flex;
 }
 
 .Card {

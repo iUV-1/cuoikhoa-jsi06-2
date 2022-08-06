@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+
 import { Link as NextUILink, Container } from "@nextui-org/react";
+
 import "./style/Test.css";
 import {
   FaTwitter,

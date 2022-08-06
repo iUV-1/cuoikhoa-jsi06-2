@@ -69,13 +69,14 @@ const CreateItems = () => {
             seller: publicKey.toBase58()
         }
         console.log(payload)
-        const request = await fetch('https://61ebae077ec58900177cdd0b.mockapi.io/nft', {
+        const request = await fetch('https://62dcaf7f4438813a26182349.mockapi.io/api/v1/collection/nft', {
             method: 'POST',
             headers: {
                  'Content-type': 'application/json'
             },
             body: JSON.stringify(payload),
         })
+        alert("Processed successfully")
     }
     
 
