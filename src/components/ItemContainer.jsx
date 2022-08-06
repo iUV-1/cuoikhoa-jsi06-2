@@ -1,25 +1,44 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect, useLayoutEffect, componentDidMount } from "react";
+import { Grid } from "@nextui-org/react";
+
 import Items from "./Items";
 import ItemList from "../mock/Data";
-import { Grid } from "@nextui-org/react";
-import { useEffect } from "react";
+
 import "./style/ItemContainer.css";
+
 const ItemContainer = () => {
   const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   const getData = async () => {
     const request = await fetch(
       "https://62dcaf7f4438813a26182349.mockapi.io/api/v1/collection/nft"
     );
-    const response = await request.json();
-    const data = response;
-    setItems(data);
+
+    if(request.ok) {
+      const response = await request.json();
+      const data = response;
+      setItems(data);
+      console.log("responsed")
+      setLoading(false);
+      return;
+    } else if (request.status) {
+      console.log("sometihng went wrong");
+      alert("error:", request.status)
+      console.log(request)
+      setLoading(false);
+      return;
+    } 
   };
-  useEffect(() => {
+
+  useLayoutEffect (() => {
     getData();
   }, []);
 
+
   return (
+    <div>
+      {`${loading ? "loading" : ""}`}
     <Grid.Container className="item-container" gap={2} justify="center">
       {items.map((a, index) => {
         return (
@@ -29,6 +48,8 @@ const ItemContainer = () => {
         );
       })}
     </Grid.Container>
+    </div>
+    
   );
 };
 export default ItemContainer;

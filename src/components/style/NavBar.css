@@ -2,13 +2,24 @@
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 1rem; */
   margin: auto;
-  position: sticky;
-  top: 20px;
+  /* position: sticky;
+  top: 20px; */
+  padding-top: 10px;
   display: flex;
   justify-content: space-between;
   /* background-color: white; */
   align-items: center;
   width: 80%;
+}
+
+.NavBarContainerScroll {
+  position: sticky;
+  top: 10px;
+  z-index: 999999;
+  transition: top 1s;
+  width: 100%;
+  padding: 0 90;
+  background-color: #25272D;
 }
 
 .NavBarHomeLink {
@@ -20,12 +31,17 @@
   align-items: center;
   font-size: 24px;
   text-decoration: none;
-  color: #60DEFB;
-  font-weight: 600; 
+  color: #24D2F9;
+  /* font-weight: 600;  */
+  border-bottom: 0px;
+   transition: border-bottom .2s ease-in-out;
 }
 
 .NavBarHomeLink:hover {
-  background-color: gainsboro;
+   border-bottom: 10px solid #FFFFFA;
+   padding-bottom: 3px;
+   transition: border-bottom .2s ease-in-out;
+   position: relative;
 }
 
 .NavBarHomeIMG {
@@ -42,14 +58,16 @@
   font-size: 24px;
   padding: 10px 10px;
   text-decoration: none;
+  color: #24D2F9;
 }
 
 .NavBarLink:hover {
-  background-color: gainsboro;
+  border-bottom: 3px solid #FFFFFA;
+  position: relative;
 }
 
 
 .NavBarLinkCurrent {
   pointer-events: none;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid #FFFFFA;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Link as NextUILink, Container, } from "@nextui-org/react";
-import "./style/Test.css";
+import "./style/Footer.css";
 import {
   FaTwitter,
   FaInstagram,
@@ -12,7 +12,7 @@ import {
 import { TbBrandReddit } from "react-icons/tb";
 import { CgMail } from "react-icons/cg";
 
-const Test = () => {
+const Footer = () => {
   return (
     <Container fluid className="TestContainer">
       <div className="TextColumn">
@@ -163,4 +163,4 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default Footer;
