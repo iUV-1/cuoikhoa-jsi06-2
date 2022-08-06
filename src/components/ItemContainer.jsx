@@ -8,7 +8,6 @@ import { Grid, Loading } from "@nextui-org/react";
 
 import Items from "./Items";
 import LoadingStatus from "./LoadingStatus";
-import ItemList from "../mock/Data";
 
 import "./style/ItemContainer.css";
 
