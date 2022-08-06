@@ -3,19 +3,25 @@
 }
 .TestContainer {
     height: auto;
-    display: flex;
+    /* display: flex; */
     -webkit-box-pack: center;
-    justify-content: center;
     position: relative;
-    width: 100%;
+    width: auto;
     background-color: rgb(4, 17, 29);
 }
 .CardBody {
+    width: 60%;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: left;
+}
+.CardBodey {
     width: 100%;
     -webkit-box-align: center;
     align-items: center;
-    text-align: center;
-
+    text-align: left;
+    margin-left:100px;
+    margin-right:-250px;
 }
 .TextTest {
     font-size: 20px;
@@ -24,12 +30,10 @@
     margin-top: 8px;
     color: rgb(255, 255, 255);
     justify-content:center;
-
 }
 .TextContainer {
     font-size: 16px;
     color: rgb(255, 255, 255);
-
 }
 html {
     font-family: Poppins, sans-serif;
@@ -139,6 +143,7 @@ html, body {
     padding-left: 0px;
     justify-content: space-around;
     flex-wrap: wrap;
+    display: flex;
 }
 .CardContainer {
     width: 20%;
@@ -146,9 +151,9 @@ html, body {
     padding-top: 0px;
     align-items: flex-start;
     margin-bottom: 16px;
-    flex-direction: column;
     color: rgb(229, 232, 235);
     -webkit-box-align: center;
+    justify-content: space-around;
 }
 h3 {
     font-weight: 600;
@@ -180,8 +185,10 @@ li {
     font-size: 12px;
     margin-top: 20px;
     margin-bottom: 20px;
-    flex-wrap: wrap;
+    margin-left:100px;
+    margin-right: 100px;
     color: rgb(255, 255, 255);
+    display: flex;
 }
 .p {
     width: 75%;
@@ -205,4 +212,16 @@ p {
     margin-left: 16px;
     margin-top: 0px;
     font-size: 12px;
+}
+.TextColumn {
+    justify-content: space-around;
+    display:flex;
+}
+.Card {
+    display: flex;
+    justify-content: space-between;
+}
+.TextColum {
+    margin-right: 200px;
+    margin-left: 100px;
 }

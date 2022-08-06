@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-<<<<<<< HEAD
-import { Link as NextUILink, Container, } from "@nextui-org/react";
+import { Link as NextUILink, Container } from "@nextui-org/react";
 import "./style/Test.css";
 import {
   FaTwitter,
@@ -17,8 +16,8 @@ const Test = () => {
   return (
     <Container className="TestContainer">
       <div className="TextColumn">
-        <div className="CardBody">
-          <div>
+        <div className="TextColum">
+          <div className="TextCardBody">
             <div className="TextTest">Stay in the loop</div>
             <div className="TextContainer">
               Join our mailing list to stay in the loop with our newest feature
@@ -64,7 +63,10 @@ const Test = () => {
                 <FaYoutube className="reactIcon" />
               </a>
             </a>
-            <a className="TextIn" href="https://www.tiktok.com/@opensea?lang=en">
+            <a
+              className="TextIn"
+              href="https://www.tiktok.com/@opensea?lang=en"
+            >
               <a className="TextInner">
                 <FaTiktok className="reactIcon" />
               </a>
@@ -79,16 +81,17 @@ const Test = () => {
       </div>
 
       <div className="Card">
-        <div className="CardBody">
+        <div className="CardBodey">
           {/* Icons */}
           <div>
             <img alt="" src="./img/download.png" />
           </div>
           <div className="TextTest">OpenSea</div>
           <div className="TextContainer">
-            The world’s first and largest digital marketplace for crypto
-            collectibles and non-fungible tokens (NFTs). Buy, sell, and discover
-            exclusive digital items.
+            The world’s first and largest<br></br>
+            digital marketplace for crypto<br></br>
+            collectibles and non-fungible<br></br> tokens (NFTs). Buy, sell, and
+            <br></br> discover exclusive digital items.
           </div>
         </div>
         <div className="CardBodo">
@@ -147,29 +150,16 @@ const Test = () => {
           </div>
         </div>
       </div>
-
       <div className="CardContainere">
         <div className="p">
           <p>© 2018 - 2022 Ozone Networks, Inc</p>
         </div>
         <div>
-          <a className="a">
-            Privacy Policy
-          </a>
-          <a className="b">
-            Terms of Service
-          </a>
+          <a className="a">Privacy Policy</a>
+          <a className="b">Terms of Service</a>
         </div>
       </div>
     </Container>
-=======
-
-const Test = () => {
-  return (
-    <div>
-      <h1>You are at: Test</h1>
-    </div>
->>>>>>> 5bde4a89a8764e1c43e4010675cd051a64f43ea2
   );
 };
 
