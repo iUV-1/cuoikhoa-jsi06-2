@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Link as NextUILink, Container } from "@nextui-org/react";
 import "./style/Footer.css";
+import download from "../img/download.png"
 
 import {
   FaTwitter,
@@ -85,7 +86,7 @@ const Footer = () => {
         <div className="CardBodey">
           {/* Icons */}
           <div>
-            <img alt="" src="./img/download.png" />
+            <img className="logo" alt="" src="https://opensea.io/static/images/logos/opensea-white.svg" />
           </div>
           <div className="TextTest">OpenSea</div>
           <div className="TextContainer">
