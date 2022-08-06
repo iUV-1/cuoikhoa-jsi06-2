@@ -6,21 +6,23 @@ import './style/Home.css'
 
 const Home = () => {
     return(
-        <>
-            <p>You are at: home</p>
-            <h1>this is a NFT store</h1>
-            <p>yep it is a store</p>
-            <div>
-                View all item
-                <AiFillShopping />
-                <RouterLink to={"Items"}>Go to store</RouterLink>
+        <div className='HomeContainer'>
+            <h1 className='HomeTitle'>this is a NFT store</h1>
+            <p className='HomeSubtext'>yep it is a store</p>
+            <div className='HomeGotoContainer'>
+                <div className='HomeGoto Grid1'>
+                    <p className='HomeGotoText'>View Items </p>
+                    <AiFillShopping className='HomeGotoIcon'/>
+                    <RouterLink to={"Items"} className="HomeGotoLink">Go to store</RouterLink>
+                </div>
+                <div className='HomeGoto Grid2'>
+                    <p className='HomeGotoText'>Create an Item </p>
+                    <AiOutlinePlusSquare className='HomeGotoIcon'/>
+                    <RouterLink to={"CreateItems"} className="HomeGotoLink">Go to Create</RouterLink>
+                </div>
             </div>
-            <div>
-                Create an Item
-                <AiOutlinePlusSquare />
-                <RouterLink to={"CreateItems"}>Go to Create</RouterLink>
-            </div>
-        </>
+
+        </div>
     )
 }
 

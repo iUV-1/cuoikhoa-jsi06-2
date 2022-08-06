@@ -1,0 +1,70 @@
+.HomeContainer {
+    margin: 20px auto;
+}
+
+.HomeTitle {
+    color: #06B4DB;
+    font-weight: 700;
+    font-size: 5vw;
+    text-align: center;
+    margin: 0;
+}
+
+.HomeSubtext {
+    text-align: center;
+    font-size: 1.5vw;
+    margin-top: 0;
+    margin-bottom: 7vh;
+}
+
+.HomeGotoContainer {
+    margin: auto;
+    padding: 0px 80px;
+    display: grid;
+    grid-template-columns: 20vw 20vw;
+    column-gap: 40px;
+}
+
+.HomeGoto {
+    margin: auto;
+    display: grid;
+    /* background-color: black; */
+    width: 100%;
+    padding: 20px;
+    /* padding-bottom: 41.5%; */
+}
+
+.Grid1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.Grid2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.HomeGotoText {
+    color: white;
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.HomeGotoIcon {
+    /* border: 3px solid gray; */
+    object-fit: cover;
+    color: white;
+    width: 10em;
+    height: auto;
+    margin: 15px auto;
+}
+
+.HomeGotoLink {
+    margin: auto;
+    padding: 10px 40px;
+    background-color: #24D2F9;
+    color: white;
+    text-decoration: none;
+}

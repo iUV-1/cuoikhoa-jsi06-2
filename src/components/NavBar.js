@@ -11,63 +11,61 @@ const NavBar = () => {
   const location = useLocation();
 
   //Set NavBar to be visble/invisible based on scroll location.
-  const [NavBarVisible, setNavBarVisible] = useState(true)
+  const [NavBarVisible, setNavBarVisible] = useState(true);
 
   const controlNavBar = () => {
-    if(window.scrollY > 100) {
-      setNavBarVisible(true)
+    if (window.scrollY > 100) {
+      setNavBarVisible(true);
     } else {
-      setNavBarVisible(false)
+      setNavBarVisible(false);
     }
-  }
+  };
 
-  useEffect(
-    () => {
-      window.addEventListener('scroll', controlNavBar)
-      return () => {
-        window.removeEventListener('scroll', controlNavBar)
-      }
-    },
-    [],
-  );
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavBar);
+    return () => {
+      window.removeEventListener("scroll", controlNavBar);
+    };
+  }, []);
 
   return (
     <>
-      <div className={`NavBarContainer ${NavBarVisible ? "NavBarContainerScroll" : ""}`}>
+      <div
+        className={`NavBarContainer ${
+          NavBarVisible ? "NavBarContainerScroll" : ""
+        }`}
+      >
         <div className="NavBarItems">
-        <RouterLink
-          to={""}
-          className={`NavBarHomeLink ${
-            window.location.pathname === "/" ? "NavBarLinkCurrent" : ""
-          }`}
-        >
-          <img src={mainLogo} alt="logo" className="NavBarHomeIMG" />
-          Home
-        </RouterLink>
-<RouterLink
-          to={"Items"}
-          className={`NavBarLink ${
-            window.location.pathname === "/Items"
-              ? "NavBarLinkCurrent"
-              : ""
-          }`}
-        >
-          Items 
-        </RouterLink>
-        <RouterLink
-          to={"CreateItems"}
-          className={`NavBarLink ${
-            window.location.pathname === "/CreateItems"
-              ? "NavBarLinkCurrent"
-              : ""
-          }`}
-        >
-          Create
-        </RouterLink>
+          <RouterLink
+            to={""}
+            className={`NavBarLink NavBarHomeLink ${
+              window.location.pathname === "/" ? "NavBarLinkCurrent" : ""
+            }`}
+          >
+            <img src={mainLogo} alt="logo" className="NavBarHomeIMG" />
+            Home
+          </RouterLink>
+          <RouterLink
+            to={"Items"}
+            className={`NavBarLink ${
+              window.location.pathname === "/Items" ? "NavBarLinkCurrent" : ""
+            }`}
+          >
+            Items
+          </RouterLink>
+          <RouterLink
+            to={"CreateItems"}
+            className={`NavBarLink ${
+              window.location.pathname === "/CreateItems"
+                ? "NavBarLinkCurrent"
+                : ""
+            }`}
+          >
+            Create
+          </RouterLink>
         </div>
 
-        <WalletMultiButton style={{backgroundColor: "black"}} />
-
+        <WalletMultiButton style={{ backgroundColor: "black" }} />
       </div>
     </>
   );
