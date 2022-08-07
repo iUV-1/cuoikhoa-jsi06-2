@@ -1,5 +1,14 @@
 import React, { useCallback } from "react";
-import { Card, Grid, Text, Button, Row, Col, Popover } from "@nextui-org/react";
+import {
+  Card,
+  Grid,
+  Text,
+  Button,
+  Row,
+  Col,
+  Popover,
+  Link,
+} from "@nextui-org/react";
 import { useWallet, useConnection } from "@solana/wallet-adapter-react";
 import { Transaction, SystemProgram, LAMPORTS_PER_SOL } from "@solana/web3.js";
 
@@ -45,7 +54,20 @@ const Item = ({ data: ItemData, setItems, items }) => {
     setItems([...items]);
     alert("processed successfully");
   }, [connection, publicKey, sendTransaction]);
+  let url = "";
+  let pic = true;
+  ItemData.url.includes("data:image/gif;base64,")
+    ? (pic = false)
+    : (pic = true);
+  ItemData.url.includes("data:image/gif;base64,")
+    ? (url = ItemData.url.replace("data:image/gif;base64,", ""))
+    : (url = ItemData.url.replace("data:image/jpeg;base64,", ""));
 
+  const downloadData = "data:application/octet-stream;base64," + url;
+  // const downloadHandling = () => {
+
+  //   window.location.href = downloadData;
+  // };
   return (
     <Card css={{ w: "100%", h: "400px" }}>
       <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
@@ -89,7 +111,7 @@ const Item = ({ data: ItemData, setItems, items }) => {
           zIndex: 1,
         }}
       >
-        <Row>
+        <Row css={{ "margin-left": "20px" }}>
           <Col>
             <Text color="#000" size={12}>
               {ItemData.isSold === publicKey?.toBase58() ? (
@@ -103,20 +125,41 @@ const Item = ({ data: ItemData, setItems, items }) => {
             </Text>
           </Col>
           <Col>
-            <Row>
+            <Row auto>
               {ItemData.isSold === publicKey?.toBase58() ? (
-                <Button flat auto rounded color="secondary">
+                <Button
+                  flat
+                  auto
+                  css={{ "margin-left": "10px" }}
+                  rounded
+                  color="secondary"
+                  // onPress={downloadHandling}
+                >
                   <Text
                     css={{ color: "inherit" }}
                     size={12}
                     weight="bold"
                     transform="uppercase"
                   >
-                    Download
+                    <Link
+                      href={downloadData}
+                      download={
+                        pic ? ItemData.name + ".jpeg" : ItemData.name + ".gif"
+                      }
+                    >
+                      Download
+                    </Link>
                   </Text>
                 </Button>
               ) : (
-                <Button onPress={onSubmit} flat auto rounded color="secondary">
+                <Button
+                  onPress={onSubmit}
+                  css={{ "margin-left": "20px" }}
+                  flat
+                  auto
+                  rounded
+                  color="secondary"
+                >
                   <Text
                     css={{ color: "inherit" }}
                     size={12}

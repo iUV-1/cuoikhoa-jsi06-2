@@ -11,7 +11,7 @@ const LoadingStatus = (props) => {
     }
     return(
         <div className='LoadingContainer'>
-            <p className='LoadingText'>Fetching content...</p>
+            <p className='LoadingText'>{props.text}</p>
             <img className="LoadingIcon"src={Loading} />
         </div>
     )

@@ -14,11 +14,16 @@
   grid-template-rows: auto;
 }
 
+@keyframes NavBarScrollDown {
+  from {top: -50px;}
+  to {top: 0px;}
+}
+
 .NavBarContainerScroll {
   position: sticky;
   top: 0px;
   z-index: 999999;
-  transition: top 1s;
+  animation: NavBarScrollDown .3s;
   width: 100%;
   padding: 10px 90;
   background-color: #1C1D22;
