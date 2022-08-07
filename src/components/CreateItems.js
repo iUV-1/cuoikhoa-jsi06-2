@@ -91,7 +91,7 @@ const CreateItems = () => {
 
     console.log(payload);
     const request = await fetch(
-      "https://62dcaf7f4438813a26182349.mockapi.io/api/v1/collection/nft",
+      "https://demo-jsi06.herokuapp.com/api/v1/collections/nft",
       {
         method: "POST",
         headers: {
