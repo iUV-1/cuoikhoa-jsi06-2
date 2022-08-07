@@ -10,8 +10,7 @@ import Price from "./CreatePage/PriceItem";
 import ButtonCreate from "./CreatePage/ButtonCreate";
 import { FaFileImage } from "react-icons/fa";
 import { Input, Textarea } from "@nextui-org/react";
-import LoadingStatus from './LoadingStatus.js'
-
+import LoadingStatus from "./LoadingStatus.js";
 
 const userData = {
   name: "",
@@ -61,9 +60,9 @@ const CreateItems = () => {
   };
   const handleClick = async (event) => {
     event.preventDefault();
-    setLoading(true)
+    setLoading(true);
     if (!publicKey) {
-    setLoading(false)
+      setLoading(false);
       alert("please open a wallet first");
       return;
     }
@@ -76,24 +75,24 @@ const CreateItems = () => {
 
     //Expected payload data:
     // des: "DESCRIPTION"
-    // isSold: "4URoFFPB1GvhN52jRuWVLQGFReQnEAtogZDZ78E6u9zr" 
-    // name: "PRODUCT NAME" 
+    // isSold: "4URoFFPB1GvhN52jRuWVLQGFReQnEAtogZDZ78E6u9zr"
+    // name: "PRODUCT NAME"
     // price: 2 <- In SOL
     // seller: "4URoFFPB1GvhN52jRuWVLQGFReQnEAtogZDZ78E6u9zr" <- SELLER ID
     // url: undefined <- URL OF IMG
-    
+
     //check if one of the content in payload is empty.
-    if (!payload.des || !payload.name || !payload.price || !payload.url){
-        setLoading(false);
-        console.log(payload)
-        alert("you must fill in all of the boxes!");
-        return;
+    if (!payload.des || !payload.name || !payload.price || !payload.url) {
+      setLoading(false);
+      console.log(payload);
+      alert("you must fill in all of the boxes!");
+      return;
     }
 
     console.log(payload);
     const request = await fetch(
-      "https://62dcaf7f4438813a26182349.mockapi.io/api/v1/collection/nft"
-      ,{
+      "https://demo-jsi06.herokuapp.com/api/v1/collections/nft",
+      {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -102,22 +101,22 @@ const CreateItems = () => {
       }
     );
 
-    if(request.status < 400){
-        setLoading(false)
-        alert("success!");
-        return;
+    if (request.status < 400) {
+      setLoading(false);
+      alert("success!");
+      return;
     } else {
-        setLoading(false)
-        alert("something went wrong!");
-        console.log("error: ", request.status);
-        console.log(request);
+      setLoading(false);
+      alert("something went wrong!");
+      console.log("error: ", request.status);
+      console.log(request);
     }
   };
 
   return (
     <div className="Container">
       <Title />
-    
+
       {/* <UpLoadBox /> */}
       <div className="UpLoadContainer">
         <label
@@ -156,6 +155,7 @@ const CreateItems = () => {
             className="ItemNameInput"
             onChange={onSelectFile}
             name="name"
+            style={{ color: "white" }}
           />
         </div>
       </div>
@@ -170,6 +170,7 @@ const CreateItems = () => {
           className="PriceInput"
           name="price"
           onChange={onSelectFile}
+          style={{ color: "white" }}
         />
       </div>
 
@@ -209,7 +210,7 @@ const CreateItems = () => {
           Create
         </button>
       </div>
-      <LoadingStatus active={loading} text="handling..."/>
+      <LoadingStatus active={loading} text="handling..." />
     </div>
   );
 };

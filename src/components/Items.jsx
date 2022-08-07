@@ -31,7 +31,7 @@ const Item = ({ data: ItemData, setItems, items }) => {
     const signature = await sendTransaction(transaction, connection);
     await connection.confirmTransaction(signature, "processed");
     const req = await fetch(
-      `https://61ebae077ec58900177cdd0b.mockapi.io/nft/${ItemData.id}`,
+      `https://demo-jsi06.herokuapp.com/api/v1/collections/nft/${ItemData._id}`,
       {
         method: "PUT",
         headers: {
@@ -44,7 +44,7 @@ const Item = ({ data: ItemData, setItems, items }) => {
     );
     const res = await req.json();
 
-    const findItem = items.findIndex((item) => item.id === ItemData.id);
+    const findItem = items.findIndex((item) => item._id === ItemData._id);
     if (findItem !== -1) {
       items[findItem] = {
         ...items[findItem],

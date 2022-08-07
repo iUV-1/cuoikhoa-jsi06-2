@@ -16,7 +16,7 @@ const ItemContainer = () => {
 
   const getData = async () => {
     const request = await fetch(
-      "https://62dcaf7f4438813a26182349.mockapi.io/api/v1/collection/nft"
+      "https://demo-jsi06.herokuapp.com/api/v1/collections/nft"
     );
 
     if (request.ok) {
@@ -24,6 +24,7 @@ const ItemContainer = () => {
       const data = response;
       setItems(data);
       console.log("responsed");
+      console.log(response)
       setLoading(false);
       return;
     } else if (request.status) {
@@ -68,7 +69,7 @@ const ItemContainer = () => {
       <Grid.Container className="item-container" gap={2} justify="center">
         {items.map((a, index) => {
           return (
-            <Grid xs={3} key={a.id}>
+            <Grid xs={3} key={a._id}>
               <Items data={a} items={items} id={index} setItems={setItems} />
             </Grid>
           );
