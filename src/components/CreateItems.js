@@ -155,6 +155,7 @@ const CreateItems = () => {
             className="ItemNameInput"
             onChange={onSelectFile}
             name="name"
+            style={{ color: "white" }}
           />
         </div>
       </div>
@@ -169,6 +170,7 @@ const CreateItems = () => {
           className="PriceInput"
           name="price"
           onChange={onSelectFile}
+          style={{ color: "white" }}
         />
       </div>
 
